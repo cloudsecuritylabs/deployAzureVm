@@ -66,7 +66,12 @@ namespace deploy_azure_vm
                 .WithRegion(location)                
                 .WithExistingResourceGroup(groupName)                
                 .WithExistingPrimaryNetworkInterface(nic)                
-                .WithLatestWindowsImage("MicrosoftWindowsServer", "WindowsServer","2012-R2-Datacenter")                .WithAdminUsername(adminUser)                .WithAdminPassword(adminPassword)                .WithComputerName(vmName)                .WithSize(VirtualMachineSizeTypes.StandardDS2V2)                .Create();
+                .WithLatestWindowsImage("MicrosoftWindowsServer", "WindowsServer","2012-R2-Datacenter")
+                .WithAdminUsername(adminUser)
+                .WithAdminPassword(adminPassword)
+                .WithComputerName(vmName)
+                .WithSize(VirtualMachineSizeTypes.StandardDS2V2)
+                .Create();
             
         }    
             
